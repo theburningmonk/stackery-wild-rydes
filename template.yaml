@@ -112,7 +112,7 @@ Resources:
     DependsOn: WebsiteEvents
     Properties:
       Action: lambda:InvokeFunction
-      FunctionName: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:requestunicorn
+      FunctionName: !GetAtt RequestUnicorn.Arn
       Principal: events.amazonaws.com
       SourceArn: !GetAtt WebsiteEvents.Arn
   WebsiteRole:
