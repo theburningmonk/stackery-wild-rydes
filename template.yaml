@@ -112,7 +112,7 @@ Resources:
     DependsOn: WebsiteEvents
     Properties:
       Action: lambda:InvokeFunction
-      FunctionName: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:requestunicorn:stackery-agent-commander
+      FunctionName: !Sub arn:aws:lambda:${AWS::Region}:${AWS::AccountId}:requestunicorn
       Principal: events.amazonaws.com
       SourceArn: !GetAtt WebsiteEvents.Arn
   WebsiteRole:
